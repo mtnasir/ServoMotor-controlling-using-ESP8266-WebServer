@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<script>
+$(document).ready(function(){
+  $("#button1").click(function(){
+     var Mesg;
+    	   Mesg= "http://192.168.1.142/Servo?ServoAngle="+$('#ServoV').val();
+    	   $.post(Mesg,function(response){
+    		   console.log(response);   
+    	  });
+  });
+});
+</script>
+
+
+<title>Hello world </title>
+
+
+
+<body >
+<div> 
+
+
+<input type="text" id=ServoV name="fname">
+
+<button type="button" id=button1 >Send Servo Value </button>
+
+</div>
+</body>
+</html>
